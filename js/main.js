@@ -43,7 +43,7 @@ const postData = async (url, data) => {
 
 
 
-const url = 'https://c8afbea18361.ngrok-free.app/register/'
+const url = 'https://9d3622ab603b.ngrok-free.app/register/'
 
 const bindPostData = (form) => {
   button.onclick = async (event) => {
