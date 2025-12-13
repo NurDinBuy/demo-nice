@@ -57,63 +57,26 @@ const bindPostData = (form) => {
     })
     const json = JSON.stringify(user);
 
-
-
-
-
-
-
-
-
-
-
-
-
-  if (password.value === passwordRepeat.value) {
-    postData(url, json)
-  }
-
-
-
-
-
-
-
+    if (name.value === '') {
+        return alert('Введиет ваше имя!')
+    }
+    if (password.value === '') {
+        return alert('Вы не придумали пароль!')
+    }
+    if (password.value.length < 8) {
+        return alert('должно быть минимум 8 символов в пароли')
+    }
+    if (passwordRepeat.value === '') {
+        return alert('Вы не повторили пароль!')
+    }
+    if (password.value === passwordRepeat.value) {
+        return postData(url, json)
+    }
+    else {
+        return alert('Пароли не совпали')
+    }
 
   };
 };
 
 bindPostData(form);
-
-// https://e82a4db53d7e.ngrok-free.app/auth/register/
-
-
-
-
-
-
-
-
-
-
-
-
-// if (name.value === '') {
-//     return alert('Введиет ваше имя!')
-// }
-// if (password.value === '') {
-//     return alert('Вы не придумали пароль!')
-// }
-// if (password.value.length < 8) {
-//     return alert('должно быть минимум 8 символов в пароли')
-// }
-// if (passwordRepeat.value === '') {
-//     return alert('Вы не повторили пароль!')
-// }
-// if (password.value === passwordRepeat.value) {
-//     return postData('https://feaf-176-123-255-178.ngrok-free.app/api/v1/users/register/', json)
-// }
-// else {
-//     return alert('Пароли не совпали')
-// }
-// WebStorm
